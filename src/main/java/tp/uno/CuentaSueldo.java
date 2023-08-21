@@ -44,6 +44,13 @@ public class CuentaSueldo extends Cuenta{
         } else avisoSaldo("Saldo insuficiente o exede el tope de " + getTOPE());
     }
 
+    public void trasferir(double monto, String alias) {
+        if(haySaldo(monto) && getSaldo() <= getTOPE()) {
+            setSaldo(getSaldo() - monto);
+            avisoSaldo("Se tranfirio " + monto + "$ al Alias: " + alias);
+        } else avisoSaldo("Saldo insuficiente o exede el tope de " + getTOPE());
+    }
+
     //region Getters and Setters
     public int getLegajo() {
         return this.LEGAJO;
@@ -72,7 +79,6 @@ public class CuentaSueldo extends Cuenta{
     public double getTOPE() {
         return this.TOPE;
     }
-
     //endregion
 
     @Override
