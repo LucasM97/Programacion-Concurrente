@@ -74,7 +74,6 @@ public class Cuenta {
     public double getINTERESANUAL() {
         return this.INTERESANUAL;
     }
-
     //endregion
 
     @Override

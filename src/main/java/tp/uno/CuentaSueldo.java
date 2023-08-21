@@ -1,6 +1,6 @@
 package tp.uno;
 
-public class CuentaSueldo extends Cuenta{
+public class CuentaSueldo extends Cuenta implements OperacionesComunes{
     private final int LEGAJO;
     private String institucion, beneficios;
     private final long CBU;
@@ -80,6 +80,16 @@ public class CuentaSueldo extends Cuenta{
         return this.TOPE;
     }
     //endregion
+
+    @Override
+    public void actualizarAlias(String alias) {
+
+    }
+
+    @Override
+    public void invertir(double monto, int dias) {
+
+    }
 
     @Override
     public String toString() {
