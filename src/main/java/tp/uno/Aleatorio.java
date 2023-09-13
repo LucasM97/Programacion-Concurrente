@@ -8,12 +8,12 @@ public class Aleatorio {
     private static final String[] beneficios = {"Beneficio 1", "Beneficio 2", "Beneficio 3", "Beneficio 4", "Beneficio 5"};
     private static final Random random = new Random();
 
-    private static int entero(int limiteInferior, int limiteSuperior) {
+    public static Integer entero(int limiteInferior, int limiteSuperior) {
         return random.nextInt(limiteSuperior - limiteInferior + 1) + limiteInferior;
     }
 
 
-    private static double decimal(double limiteInferior, double limiteSuperior) {
+    public static double decimal(double limiteInferior, double limiteSuperior) {
         double numero = random.nextDouble() * (limiteSuperior - limiteInferior + 1) + limiteInferior;
         return (double) Math.round(numero * 100) / 100;
     }
