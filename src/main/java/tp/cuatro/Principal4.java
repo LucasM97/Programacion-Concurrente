@@ -7,8 +7,8 @@ public class Principal4 {
 
         Thread[] hilos = new Thread[Matriz.FILAS];
 
-        System.out.println(matrizA);
-        System.out.println(matrizB);
+        System.out.println("### Matriz A ##########################################\n" + matrizA);
+        System.out.println("### Matriz B ##########################################\n" + matrizB);
 
         for (int i = 0; i < Matriz.FILAS; i++) {
             hilos[i] = new Thread(new Hilo(matrizA, matrizB));
@@ -23,8 +23,8 @@ public class Principal4 {
             }
         }
 
-        System.out.println(matrizA);
-        System.out.println(matrizB);
+        System.out.println("### Matriz A ##########################################\n" + matrizA);
+        System.out.println("### Matriz B ##########################################\n" + matrizB);
     }
 }
 

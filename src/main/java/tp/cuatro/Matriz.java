@@ -1,8 +1,8 @@
 package tp.cuatro;
 
 public class Matriz {
-    public final static int FILAS = 5;
-    public final static int COLUMNAS = 10;
+    public final static int FILAS = 100;
+    public final static int COLUMNAS = 200;
     private int[][] matriz;
 
     public Matriz() {
