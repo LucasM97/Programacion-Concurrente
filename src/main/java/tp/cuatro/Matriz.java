@@ -1,30 +1,5 @@
 package tp.cuatro;
 
-/**
- * Clase Matriz
- *
- * La clase Matriz define la region critica.
- * Esta compuesta por los atributos constantes FILAS, para definir un valor
- * de filas por defecto, COLUMNAS para definir un valor de columnas por degecto
- * y por un array bidimencional en le que se almacenan los datos.
- *
- * Tambien posee los metodos
- *
- * Constructor: permite definir las dimenciones de la matriz
- * o asignarle los valres por defecto en caso de crear un objeto con el
- * constructor sin parametros.
- *
- * agregar: añade un numero entero a la matriz en la poscicion
- * especificada.
- *
- * dato: retorna el dato en en la posicion especificada
- *
- * cargarMatriz: carga la matriz matriz con números aleatorios
- *
- * Se sobre-escribe el metodo toString para mostrar la matriz
- * */
-
-
 public class Matriz {
     public final static int FILAS = 100;
     public final static int COLUMNAS = 200;
