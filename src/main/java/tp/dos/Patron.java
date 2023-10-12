@@ -11,12 +11,22 @@ public class Patron extends MatrizCuadrada<Character>{
         boolean permiso = false;
         int centro = (size() - 1) / 2;
 
+        System.out.println(this.toString());
+
         completarDiagonalPrincipal();
-        completarDiagonalOpuesta();
+
+        System.out.println(this.toString());
+
+        completarDiagonalSecundaria();
+
+        System.out.println(this.toString());
+
         completarEspacios();
 
-        for (int i = 0; i < super.size(); i++) {
-            for (int j = 0; j < super.size(); j++) {
+        System.out.println(this.toString());
+
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
                 if (i == centro && j == centro) continue;
                 if (dato(j,i) == '*') {
                     permiso = !permiso;
@@ -31,25 +41,25 @@ public class Patron extends MatrizCuadrada<Character>{
     }
 
     public void completarDiagonalPrincipal() {
-        for (int i = 0; i < super.size(); i++) {
-            for (int j = 0; j < super.size(); j++) {
-                if (i == j) super.agregar(i,j,'*');
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                if (i == j) agregar(i,j,'*');
             }
         }
     }
 
-    public void completarDiagonalOpuesta() {
-        for (int i = 0; i < super.size(); i++) {
-            for (int j = 0; j < super.size(); j++) {
-                if (i + j == super.size() - 1) super.agregar(i,j,'*');
+    public void completarDiagonalSecundaria() {
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                if (i + j == size() - 1) agregar(i,j,'*');
             }
         }
     }
 
     public void completarEspacios() {
-        for (int i = 0; i < super.size(); i++) {
-            for (int j = 0; j < super.size(); j++) {
-                if (dato(j,i) == null) super.agregar(j,i,' ');
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                if (dato(j,i) == null) agregar(j,i,' ');
             }
         }
     }
