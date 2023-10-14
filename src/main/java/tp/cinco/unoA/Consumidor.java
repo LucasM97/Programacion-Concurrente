@@ -14,7 +14,6 @@ public class Consumidor extends Thread {
 
     @Override
     public void run() {
-        int I = 400, S = 800;
         synchronized (lista) {
             while (lista.size() == 0) {
                 System.out.println("Consumidor " + i + " : No hay elementos para consumir, me duermo");
@@ -25,7 +24,7 @@ public class Consumidor extends Thread {
                     e.printStackTrace();
                 }
             }
-            ToolThread.sleep(I,S);
+            ToolThread.sleep(400,800);
             int consumido = lista.remove(0);
             System.out.println("Consumidor " + i + " : Consumido: " + consumido);
         }

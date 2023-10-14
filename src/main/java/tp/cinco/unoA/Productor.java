@@ -14,20 +14,16 @@ public class Productor extends Thread {
 
     @Override
     public void run() {
-        int inicio = 10, fin = 100, I = 1000, S = 1500;
+        int inicio = 10, fin = 100;
         Random random = new Random();
         int numero = random.nextInt((fin - inicio) + 1) + inicio;
 
-        try {
-            Thread.sleep(random.nextInt((S - I) + 1) + I);
-            synchronized (lista) {
-                lista.add(numero);
-                lista.notify();
-                System.out.println("Productor " + i + " : Numero agregado: " + numero);
-                System.out.println("Productor " + i + " : Notificando......");
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        ToolThread.sleep(1000,1500);
+        synchronized (lista) {
+            lista.add(numero);
+            lista.notify();
+            System.out.println("Productor " + i + " : Numero agregado: " + numero);
+            System.out.println("Productor " + i + " : Notificando......");
         }
     }
 }

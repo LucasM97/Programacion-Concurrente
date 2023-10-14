@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        int I = 100, S = 200, i = 0;
+        int i = 0;
         ArrayList<Integer> lista = new ArrayList<>();
 
         while (true) {
@@ -14,7 +14,7 @@ public class Principal {
             productor.start();
             consumidor.start();
 
-            ToolThread.sleep(I,S);
+            ToolThread.sleep(100,200);
 
             i++;
         }
