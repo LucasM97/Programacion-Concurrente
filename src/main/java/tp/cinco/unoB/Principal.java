@@ -1,7 +1,5 @@
 package tp.cinco.unoB;
 
-import java.util.Random;
-
 public class Principal {
     public static void main(String[] args) {
         int i = 0;
