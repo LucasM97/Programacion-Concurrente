@@ -44,10 +44,6 @@ public class ArrayLimitado<Integer> {
         return num;
     }
 
-    public int size() {
-        return lista.size();
-    }
-
     public boolean isFull() {
         return lista.size() >= MAXIMO;
     }

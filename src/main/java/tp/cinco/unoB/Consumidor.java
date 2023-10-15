@@ -1,7 +1,5 @@
 package tp.cinco.unoB;
 
-import java.util.Random;
-
 public class Consumidor extends Thread {
     int i;
     ArrayLimitado<Integer> lista;
