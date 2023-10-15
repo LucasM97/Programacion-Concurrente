@@ -14,9 +14,9 @@ public class ArrayLimitado<Integer> {
     public synchronized void add(Integer valor, int id) {
         while (isFull()) {
             try {
-                System.out.println("Productor " + id + " No hay espacio para agregar otro producto");
+                System.out.println("Productor " + id + " : No hay espacio para agregar otro producto");
                 wait();
-                System.out.println("Productor " + id + " Se libero un espacio... pudo agregar un producto");
+                System.out.println("Productor " + id + " : Se libero un espacio... pudo agregar un producto");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
