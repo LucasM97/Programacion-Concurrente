@@ -6,13 +6,13 @@ public class Principal {
         ArrayLimitado<Integer> miLista = new ArrayLimitado<>();
 
         while (true) {
-            Productor productor = new Productor(miLista,i);
-            Consumidor consumidor = new Consumidor(miLista,i);
+            Productor productor = new Productor(miLista, i);
+            Consumidor consumidor = new Consumidor(miLista, i);
 
             productor.start();
             consumidor.start();
 
-            ToolThread.sleep(100,200);
+            ToolThread.sleep(100, 200);
 
             i++;
         }

@@ -2,7 +2,7 @@ package tp.cinco.unoB;
 
 import java.util.Random;
 
-public class ToolThread extends Thread{
+public class ToolThread extends Thread {
     public ToolThread() {
         super();
     }

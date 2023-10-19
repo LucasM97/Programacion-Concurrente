@@ -17,7 +17,7 @@ public class Productor extends Thread {
         Random random = new Random();
         int numero = random.nextInt((fin - inicio) + 1) + inicio;
 
-        ToolThread.sleep(400,800);
-        lista.add(numero,i);
+        ToolThread.sleep(400, 800);
+        lista.add(numero, i);
     }
 }

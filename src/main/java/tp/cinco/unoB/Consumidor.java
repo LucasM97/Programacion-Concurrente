@@ -11,7 +11,7 @@ public class Consumidor extends Thread {
 
     @Override
     public void run() {
-        ToolThread.sleep(1000,1500);
+        ToolThread.sleep(1000, 1500);
         lista.remove(i);
     }
 }
