@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Mostrador {
 
-    private ArrayList<Producto> mostrador;
+    private final ArrayList<Producto> mostrador;
 
     public Mostrador() {
         this.mostrador = new ArrayList<>();
@@ -16,7 +16,7 @@ public class Mostrador {
         System.out.println(producto.getNombre() + " " + producto.getNumero() + " agregado/a al mostrador");
     }
 
-    public synchronized Producto remove(int numeroCliente) {
+    public synchronized void remove(int numeroCliente) {
         Producto productoAux;
         while (mostrador.isEmpty()) {
             System.out.println("Cliente " + numeroCliente + " : No hay productos en el mostrador... Esperando...");
@@ -29,6 +29,5 @@ public class Mostrador {
         }
         productoAux = mostrador.remove(0);
         System.out.println("Cliente " + numeroCliente + " compró " + productoAux.getNombre() + " " + productoAux.getNumero());
-        return productoAux;
     }
 }

@@ -2,7 +2,7 @@ package tp.cinco.dos;
 
 public class Principal {
     public static void main(String[] args) {
-        int numeroCliente = 0;
+        int numeroCliente = 1;
         Mostrador mostrador = new Mostrador();
 
         HornoBizcocho hBizcochos = new HornoBizcocho(mostrador);
