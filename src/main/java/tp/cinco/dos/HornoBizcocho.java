@@ -1,7 +1,7 @@
 package tp.cinco.dos;
 
 public class HornoBizcocho extends Thread {
-    private Mostrador mostrador;
+    private final Mostrador mostrador;
 
     public HornoBizcocho(Mostrador mostrador) {
         this.mostrador = mostrador;

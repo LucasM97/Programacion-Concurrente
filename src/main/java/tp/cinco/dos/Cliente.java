@@ -2,7 +2,7 @@ package tp.cinco.dos;
 
 public class Cliente extends Thread {
     int numeroCliente;
-    private Mostrador mostrador;
+    private final Mostrador mostrador;
 
     public Cliente(Mostrador mostrador, int numeroCliente) {
         this.mostrador = mostrador;
