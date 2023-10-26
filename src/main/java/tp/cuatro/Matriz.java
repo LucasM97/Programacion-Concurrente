@@ -1,11 +1,8 @@
 package tp.cuatro;
 
-
-
-
 public class Matriz {
-    public final static int FILAS = 100;
-    public final static int COLUMNAS = 200;
+    public final static int FILAS = 4;
+    public final static int COLUMNAS = 8;
     private int[][] matriz;
 
     public Matriz() {
@@ -29,7 +26,7 @@ public class Matriz {
     public void cargarMatriz() {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (int) (Math.random() * 100 + 1);
+                matriz[i][j] = (int) (Math.random() * 9 + 1);
             }
         }
     }

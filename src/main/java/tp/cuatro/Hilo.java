@@ -1,23 +1,23 @@
 package tp.cuatro;
 
 public class Hilo extends Thread{
-    private Matriz matrizA;
-    private Matriz matrizB;
+    private final Matriz matrizA;
+    private final Matriz matrizB;
+    private final int numeroFila;
 
-    public Hilo(Matriz matrizA, Matriz matrizB) {
+    public Hilo(Matriz matrizA, Matriz matrizB, int numeroFila) {
         this.matrizA = matrizA;
         this.matrizB = matrizB;
+        this.numeroFila = numeroFila;
     }
 
     public void run() {
-        int fila[] = new int[Matriz.FILAS];
+        int[] fila = new int[Matriz.COLUMNAS];
 
-        for (int i = 0; i < Matriz.FILAS; i++) {
-            for (int j = 0; j < Matriz.COLUMNAS; j++) {
-                fila[i] = matrizA.dato(i,j);
-                matrizA.agregar(i,j,matrizB.dato(j,i));
-                matrizB.agregar(j,i,fila[i]);
-            }
+        for (int j = 0; j < Matriz.COLUMNAS; j++) {
+            fila[j] = matrizA.dato(numeroFila, j);
+            matrizA.agregar(numeroFila, j, matrizB.dato(j, numeroFila));
+            matrizB.agregar(j, numeroFila, fila[j]);
         }
     }
 }
