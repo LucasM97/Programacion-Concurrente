@@ -13,7 +13,7 @@ public class Empleado implements Runnable {
             Persona persona = GenerarPersona.aleatoria();
             Runnable empleado = new Empleado(persona);
             new Thread(empleado).start();
-            ToolThread.sleep(600, 800);
+            ToolThread.sleep(600, 1200);
         }
     }
 
