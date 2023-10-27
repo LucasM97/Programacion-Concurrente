@@ -8,8 +8,6 @@ public class Principal {
 
         Thread[] hilos = new Thread[matrizA.getFilas()];
 
-        System.out.println((int) Operaciones.SumRootN(81));
-
         System.out.println("### Matriz A ##########################################\n" + matrizA);
         System.out.println("### Matriz B ##########################################\n" + matrizB);
 
