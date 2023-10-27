@@ -19,7 +19,7 @@ public class CalculoConcurrente extends Operaciones implements Runnable {
             multiplicacion = 0;
             for (int j = 0; j < matrizA.getColumnas(); j++){
                 multiplicacion += matrizA.dato(numeroFila, j) * matrizB.dato(j, i);
-                matrizC.agregar(numeroFila, i, (int) Operaciones.SumRootN(multiplicacion));
+                matrizC.agregar(numeroFila, i, (int) SumRootN(multiplicacion));
             }
         }
     }
