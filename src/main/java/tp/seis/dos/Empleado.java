@@ -10,7 +10,7 @@ public class Empleado implements Runnable {
 
     public static void main(String[] args) {
         while (true) {
-            Persona persona = GenerarPersona.aleatoria();
+            Persona persona = Persona.aleatoria();
             Runnable empleado = new Empleado(persona);
             new Thread(empleado).start();
             ToolThread.sleep(600, 1200);

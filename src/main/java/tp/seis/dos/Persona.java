@@ -1,6 +1,7 @@
 package tp.seis.dos;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Persona {
     private String sexo;
@@ -32,6 +33,13 @@ public class Persona {
     }
 
     public boolean soyMujer() { return Objects.equals(this.getSexo(), "MUJER"); }
+
+    public static Persona aleatoria() {
+        Random random = new Random();
+        boolean generarHombre = random.nextBoolean();
+        if (generarHombre) return new Hombre();
+        return new Mujer();
+    }
 
     @Override
     public String toString() {
