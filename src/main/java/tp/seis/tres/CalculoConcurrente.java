@@ -13,7 +13,7 @@ public class CalculoConcurrente extends Operaciones implements Runnable {
         this.numeroFila = numeroFila;
     }
 
-    public void run() {
+    public synchronized void run() {
         int multiplicacion;
         for (int i = 0; i < matrizB.getColumnas(); i++) {
             multiplicacion = 0;
