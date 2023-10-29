@@ -1,5 +1,4 @@
 package tp.seis.dos;
-
 public class Contador {
     public static final int MAXIMO_HOMBRES = 10;
     public static final int MAXIMO_MUJERES = 7;

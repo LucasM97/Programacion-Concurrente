@@ -1,16 +1,18 @@
 package tp.cuatro;
 
 public class Matriz {
-    public final static int FILAS = 4;
-    public final static int COLUMNAS = 8;
+    public int filas;
+    public int columnas;
     private int[][] matriz;
 
     public Matriz() {
-        this(Matriz.FILAS, Matriz.COLUMNAS);
+        this(3, 5);
     }
 
     public Matriz(int filas, int columnas) {
         if (filas <= 0 || columnas <= 0) throw new RuntimeException("El tamaño no es valido");
+        this.filas = filas;
+        this.columnas = columnas;
         this.matriz = new int[filas][columnas];
         cargarMatriz();
     }

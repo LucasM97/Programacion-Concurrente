@@ -11,10 +11,10 @@ public class Hilo extends Thread{
         this.numeroFila = numeroFila;
     }
 
-    public void run() {
-        int[] fila = new int[Matriz.COLUMNAS];
+    public synchronized void run() {
+        int[] fila = new int[matrizA.columnas];
 
-        for (int j = 0; j < Matriz.COLUMNAS; j++) {
+        for (int j = 0; j < matrizA.columnas; j++) {
             fila[j] = matrizA.dato(numeroFila, j);
             matrizA.agregar(numeroFila, j, matrizB.dato(j, numeroFila));
             matrizB.agregar(j, numeroFila, fila[j]);
